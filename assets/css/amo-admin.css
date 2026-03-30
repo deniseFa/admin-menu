@@ -1,0 +1,90 @@
+/* =========================================================
+    VARIABLES DE DISEÑO GLOBALES
+========================================================= */
+:root {
+    --tk-purple: #845cff;
+    --tk-purple-hover: #6a44e0;
+    --tk-purple-light: #f4f0ff; 
+    
+    --tk-text-dark: #1e293b; 
+    --tk-text-gray: #64748b; 
+    --tk-icon-gray: #94a3b8; 
+    
+    --tk-bg-light: #f8fafc; 
+    --tk-border: #e2e8f0;   
+    --tk-white: #ffffff;
+    
+    --tk-sidebar-width: 260px;
+    --tk-topbar-height: 60px;
+}
+
+/* =========================================================
+    TRANSICIONES GLOBALES PARA EL COLLAPSE SUAVE
+========================================================= */
+#adminmenuwrap, #adminmenuback, #wpcontent, #wpfooter {
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* =========================================================
+    ESTILOS GLOBALES (Tipografía)
+========================================================= */
+body.wp-admin, #wpwrap, #wpcontent, #wpbody-content, 
+.wrap h1, .wrap h2, .wrap h3, .wrap h4, .wrap h5, .wrap h6,
+p, div, span, label, td, th, input, select, textarea, a {
+    font-family: "Poppins", sans-serif !important;
+}
+
+/* =========================================================
+    COMPONENTES UI DEL PLUGIN (Amo)
+========================================================= */
+/* Botón Píldora Púrpura */
+.amo-btn-pill {
+    display: inline-block;
+    background-color: var(--tk-purple);
+    color: var(--tk-white) !important;
+    padding: 8px 24px;
+    border-radius: 50px; /* Forma de píldora */
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.amo-btn-pill:hover {
+    background-color: var(--tk-purple-hover);
+    box-shadow: 0 4px 6px rgba(132, 92, 255, 0.2);
+}
+
+/* Estilos para nuestras cajas de meta (Configuración) */
+.amo-meta-box-row {
+    margin-bottom: 20px;
+}
+
+.amo-meta-box-row label {
+    display: block;
+    font-weight: 600;
+    color: var(--tk-text-dark);
+    margin-bottom: 8px;
+}
+
+.amo-meta-box-row select,
+.amo-meta-box-row input[type="number"] {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid var(--tk-border);
+    border-radius: 6px;
+    padding: 6px 10px;
+}
+
+.amo-meta-box-row select[multiple] {
+    height: 120px;
+}
+
+.amo-help-text {
+    font-size: 12px;
+    color: var(--tk-text-gray);
+    display: block;
+    margin-top: 4px;
+}

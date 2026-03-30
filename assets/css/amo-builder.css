@@ -1,0 +1,160 @@
+/* Layout del Constructor */
+.amo-builder-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+.amo-builder-sidebar {
+    width: 280px;
+    background: var(--tk-bg-light);
+    border: 1px solid var(--tk-border);
+    padding: 20px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.amo-builder-canvas {
+    flex-grow: 1;
+    background: #fff;
+    border: 1px dashed var(--tk-border);
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 300px;
+}
+
+/* Formularios en el Sidebar */
+.amo-form-group {
+    margin-bottom: 15px;
+}
+.amo-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--tk-text-dark);
+}
+.amo-form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--tk-border);
+    border-radius: 4px;
+}
+.amo-help-link {
+    font-size: 11px;
+    color: var(--tk-purple);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+/* Elementos del Menú (Drag & Drop) */
+.amo-sortable-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.amo-menu-item {
+    background: var(--tk-white);
+    border: 1px solid var(--tk-border);
+    border-left: 4px solid var(--tk-purple);
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.amo-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    cursor: grab;
+    background: var(--tk-bg-light);
+}
+
+.amo-item-header:active {
+    cursor: grabbing;
+}
+
+.amo-item-title {
+    font-weight: 600;
+    color: var(--tk-text-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.amo-item-actions button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--tk-text-gray);
+    padding: 4px 8px;
+}
+.amo-item-actions button:hover {
+    color: var(--tk-purple);
+}
+.amo-item-actions .amo-delete-btn:hover {
+    color: #dc2626;
+}
+
+/* Cuerpo desplegable para editar */
+.amo-item-body {
+    padding: 15px;
+    border-top: 1px solid var(--tk-border);
+    display: none; /* Oculto por defecto */
+    background: #fff;
+}
+.amo-item-body.is-open {
+    display: block;
+}
+
+.amo-item-body .amo-form-group {
+    margin-bottom: 10px;
+}
+
+/* Efecto al arrastrar */
+.amo-sortable-ghost {
+    opacity: 0.4;
+    background: var(--tk-purple-light);
+    border: 1px dashed var(--tk-purple);
+}
+
+/* =========================================================
+   NUEVO: ESTILOS PARA SUBMENÚS ANIDADOS
+========================================================= */
+
+/* Contenedor de la lista de submenús */
+.amo-sub-sortable-list {
+    list-style: none;
+    padding: 0 15px 15px 30px; /* Identación para que se note que es hijo */
+    margin: 0;
+    background: var(--tk-white);
+    border-radius: 0 0 4px 4px;
+    min-height: 5px; 
+}
+
+.amo-sub-sortable-list:empty {
+    padding: 0; /* Sin espacio interno si no hay hijos */
+}
+
+/* Estilo específico del elemento hijo */
+.amo-child-item {
+    border-left-color: var(--tk-icon-gray); /* Borde gris en lugar de morado */
+    margin-top: 10px;
+    margin-bottom: 0;
+    box-shadow: none; /* Menos profundidad visual */
+    border: 1px solid var(--tk-border);
+    border-left-width: 3px;
+}
+
+.amo-child-item .amo-item-header {
+    background: #fdfdfd;
+    padding: 8px 15px;
+}
+
+.amo-child-item .amo-item-actions button {
+    font-size: 11px;
+}
